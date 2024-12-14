@@ -17,13 +17,12 @@
     <div id="maindiv">
         <p id="sign">Dejacraft</p>
     </div>
-    <div id="leftpanel">
-        <button id="downbtn">X</button>
-    </div>
+    <div id="leftpanel"></div>
 </body>
 </html>
 
 <script>
+    var out = false;
     VANTA.WAVES({
         el: "#bg",
         mouseControls: true,
@@ -37,35 +36,38 @@
         waveHeight: 10.00
     })
     document.getElementById("leftpanelupbtn").onclick = function() {
-        document.getElementById("leftpanel").animate([
-            {left: `-100vw`}, {top: `0`, left: `0`}
-        ], {
-            duration: 500,
-            iterations: 1,
-            fill:"forwards"
-        })
-        document.getElementById("leftpanelupbtn").animate([
-            {top: '50vh'}, {transform: `translateX(-200%)`}
-        ], {
-            duration: 200,
-            iterations: 1,
-            fill:"forwards"
-        })   
-    }
-    document.getElementById("downbtn").onclick = function() {
-        document.getElementById("leftpanel").animate([
-            {top: `0`, left: `0`}, {left: `-100vw`}
-        ], {
-            duration: 500,
-            iterations: 1,
-            fill:"forwards"
-        })
-        document.getElementById("leftpanelupbtn").animate([
-            {transform: `translateX(-100%)`}, {transform: `translateX(0)`}
-        ], {
-            duration: 200,
-            iterations: 1,
-            fill:"forwards"
-        })
+        if (!out) {
+            document.getElementById("leftpanel").animate([
+                {left: `-100vw`}, {top: `0`, left: `0`}
+            ], {
+                duration: 200,
+                iterations: 1,
+                fill:"forwards"
+            })
+            document.getElementById("leftpanelupbtn").animate([
+                {top: '50vh'}, {transform: `translateX(26vw) rotateZ(180deg)`}
+            ], {
+                duration: 200,
+                iterations: 1,
+                fill:"forwards"
+            })
+            out = true;
+        } else {
+            document.getElementById("leftpanel").animate([
+                {top: `0`, left: `0`}, {left: `-100vw`}
+            ], {
+                duration: 500,
+                iterations: 1,
+                fill:"forwards"
+            })
+            document.getElementById("leftpanelupbtn").animate([
+                {transform: `translateX(26vw) rotateZ(180deg)`}, {top: '50vh', transform: `translateX(0) rotateZ(0deg)`}
+            ], {
+                duration: 200,
+                iterations: 1,
+                fill:"forwards"
+            })
+            out = false;
+        }   
     }
 </script>
