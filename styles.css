@@ -1,0 +1,132 @@
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#sign {
+    font-size: 25vw;   
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: transparent;
+    text-shadow: 
+        -4px 4px #0d48a1, 
+        -8px 8px #1976d2,  
+        -12px 12px #2196f3, 
+        -16px 16px #03a9f4,  
+        -20px 20px #0288d1,  
+        -24px 24px #0277bd,  
+        -28px 28px #00bcd4, 
+        -32px 32px #0097a7,  
+        -36px 36px #80d6ff;  
+    
+}
+
+#maindiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 99.5vh;
+    width: 100vw;
+    animation: idk 1s ease-in-out 0.2s 1;
+    animation-fill-mode: forwards;
+    transition: all 1s ease-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes idk {
+    0% {
+        transform: translateY(0) scale(1);
+        top: 0;
+    }
+    100% {
+        transform: translateY(-50%) scale(0.2);
+        top: 7vh;
+    }
+}
+
+#leftpanel {
+    position: absolute;
+    top: 0vh;
+    left: -100vw;
+    height: 100vh;
+    width: 25vw;
+    transition: all 1s ease-out;
+    animation-fill-mode: forwards;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+#downbtn {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    width: 50px;
+    height: 50px;
+    font-style: normal;
+    background-color: rgb(0, 0, 0);
+    border: solid black;
+    border-radius: 20px;
+    left: calc(100% - 60px);
+    top: 10px;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    line-height: 0;
+    padding: 0px;
+}
+
+#leftpanelupbtn {
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    width: 30px;
+    height: 30px;
+    font-style: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    vertical-align: middle;
+    font-size: 100px;
+    line-height: 0;
+    padding: 0px;
+    top: 50vh;
+    animation-fill-mode: forwards;
+    animation: btninit 1s ease-in-out 0s 1;
+    z-index: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes btninit {
+    0% {
+        left: -100vw;
+    }
+    100% {
+        top: 50vh;
+        left: 0;
+    }
+}
