@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" rel="preload" as="script">
+    <link href="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js" rel="preload" as="script">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 </head>
@@ -45,7 +47,7 @@
                 fill:"forwards"
             })
             document.getElementById("leftpanelupbtn").animate([
-                {top: '50vh'}, {transform: `translateX(calc(26vw + 10px)) translateX(1px) rotateZ(180deg)`}
+                {top: '50vh'}, {transform: `translateX(26.8vw) translateX(1px) rotateZ(180deg)`}
             ], {
                 duration: 200,
                 iterations: 1,
@@ -61,7 +63,7 @@
                 fill:"forwards"
             })
             document.getElementById("leftpanelupbtn").animate([
-                {transform: `translateX(calc(26vw + 10px)) rotateZ(180deg)`}, {top: '50vh', transform: `translateX(0) rotateZ(0deg)`}
+                {transform: `translateX(26.5vw) rotateZ(180deg)`}, {top: '50vh', transform: `translateX(0) rotateZ(0deg)`}
             ], {
                 duration: 200,
                 iterations: 1,
