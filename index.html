@@ -45,7 +45,7 @@
                 fill:"forwards"
             })
             document.getElementById("leftpanelupbtn").animate([
-                {top: '50vh'}, {transform: `translateX(26vw) rotateZ(180deg)`}
+                {top: '50vh'}, {transform: `translateX(calc(26vw + 10px)) translateX(1px) rotateZ(180deg)`}
             ], {
                 duration: 200,
                 iterations: 1,
@@ -61,7 +61,7 @@
                 fill:"forwards"
             })
             document.getElementById("leftpanelupbtn").animate([
-                {transform: `translateX(26vw) rotateZ(180deg)`}, {top: '50vh', transform: `translateX(0) rotateZ(0deg)`}
+                {transform: `translateX(calc(26vw + 10px)) rotateZ(180deg)`}, {top: '50vh', transform: `translateX(0) rotateZ(0deg)`}
             ], {
                 duration: 200,
                 iterations: 1,
