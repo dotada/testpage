@@ -140,7 +140,7 @@ body {
     top: 0;
 }
 
-#top-image {
+/*#top-image {
     position: absolute;
     max-height: 50%;
     width: auto;
@@ -150,4 +150,18 @@ body {
     top: 25%;
     transform: translateX(-50%) translateY(-50%);
     border-radius: 20px;
+}*/
+
+#top-image {
+    position: absolute;
+    max-height: 50%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: forwards;
+    border-radius: 20px;
+    left: -100%;
+    top: 25%;
+    opacity: 0;
 }
