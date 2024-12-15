@@ -139,3 +139,15 @@ body {
     border: solid thin white;
     top: 0;
 }
+
+#top-image {
+    position: absolute;
+    max-height: 50%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 20px;
+}
