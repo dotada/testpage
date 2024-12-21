@@ -138,12 +138,15 @@ body {
     background-color: white;
     border: solid thin white;
     top: 0;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #top-image {
     position: absolute;
-    max-height: 100%;
-    max-width: 100%;
+    max-height: calc(100% - 40px);
+    max-width: calc(100% - 40px);
     object-fit: contain;
     animation-timing-function:ease-in-out;
     animation-fill-mode: forwards;
@@ -151,4 +154,10 @@ body {
     left: -100%;
     top: 25%;
     opacity: 0;
+}
+
+#autobiography {
+    position: relative;
+    left: 50%;
+    color: white;
 }
